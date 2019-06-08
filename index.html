@@ -4,9 +4,26 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!--Spotify Embbed API-->
     <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <!--Google Maps-->
+    
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+        width: 50%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 <body>
     <a class="twitter-timeline"
@@ -20,6 +37,8 @@
         data-height="400">
     </a> 
 
-   
-    
+
+    <div id="map">
+    <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJv0622aeglVQR9V-uTvtZZKM&destination=place_id:ChIJkbAL-LGglVQRlTfmyWPTDjY&key=AIzaSyB14uDFCVf-_VSWe7KjEsNWbEwWxUf7zkA" allowfullscreen></iframe>
+    </div>
 </body>
