@@ -1,0 +1,34 @@
+#map {
+    position:relative;
+    overflow:hidden;
+    margin: 0;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    border:10px;
+    
+  }
+#map iframe{
+    position: inline-block;
+    top:0;
+    left:0;
+    width:400px;
+    height:400px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 1px;
+    
+}
+iframe
+#nav {
+    margin-bottom: 0px;
+}
+
+#twitter{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
