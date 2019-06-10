@@ -36,6 +36,8 @@ iframe
     padding-top: 10px;
     padding-left: 10px;
     margin: 0;
+    position: inline-block;
+    float:left;
 }
 
 #weather-widget {
