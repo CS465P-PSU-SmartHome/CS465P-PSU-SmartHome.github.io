@@ -37,4 +37,10 @@ function init(weatherResult){
 
 }
 
+document.getElementById('refresh-twitter-button').addEventListener('click', () => {
+    let twitterTL = document.getElementById('twitter-timeline')
+    twitterTL.href = "https://twitter.com/" + document.getElementById('change-twitter').value;
+})
+
+
 getPortlandWeather()
