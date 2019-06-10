@@ -2,7 +2,7 @@ let weatherapi= "3fc77026b7614185821e726e77985336";
 let units = "imperial"
 
 function getPortlandWeather(){
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&APPID=${weatherapi}&units=imperial`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=portland&APPID=${weatherapi}&units=imperial`).then(result => {
         return result.json();
     }).then(result => {
         init(result)
@@ -29,7 +29,7 @@ function init(weatherResult){
     //city
     cityname.innerHTML = weatherResult.name
     //weather icon
-    weathericon.src = 'http://openweathermap.org/img/w/' + weatherResult.weather[0].icon + '.png';
+    weathericon.src = 'https://openweathermap.org/img/w/' + weatherResult.weather[0].icon + '.png';
     //temp
     temperature.innerHTML = Math.floor(weatherResult.main.temp) + "&#176 F"
     //humidity
