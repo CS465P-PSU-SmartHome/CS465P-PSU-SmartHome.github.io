@@ -23,9 +23,6 @@
         <div class="navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class= "nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class= "nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class= "nav-link" href="#schedule">Schedule</a></li>
-                <li class="nav-item"><a class= "nav-link" href="#footer">Footer</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Dashboard
@@ -39,29 +36,42 @@
         <div>
     </nav>
 
-     <!--weather-->
-    <div class="h-50 d-inline-block" id="weather" style="position:inline">
-        <div id="weather-widget">
-            <div>
-                <h1 id="cityHeader"></h1>
-                <div id="weahterMain">
-                    <div id="temperature"></div>
-                    <div><img id="weatherIcon"></div>
-                    <div id="weatherDescriptionHeader"></div>
-                    
+    <div class="h-100 d-inline-block" id="weather-nest-block" style="position:relative">
+        <!--weather-->
+        <div id="weather">
+            <div id="weather-widget">
+                <div>
+                    <h1 id="cityHeader"></h1>
+                    <div id="weahterMain">
+                        <div id="temperature"></div>
+                        <div><img id="weatherIcon"></div>
+                        <div id="weatherDescriptionHeader"></div>
+                        
+                    </div>
+                    <div id="humidity" class="bottomDetails"></div>
                 </div>
-                <div id="humidity" class="bottomDetails"></div>
+            </div>
+        </div>
+
+        <!--Nest-->
+        <div id="nest">
+            <div id="nest-widget">
+                <div>
+                    <h1>Room Temperature</h1>
+                    <div id="roomTempMain">
+                        <div id="roomTemperature">68&#176 F</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-
-    <div class="h-50 d-inline-block" id="twitter" style="position:inline">
+    <div class="h-50 d-inline-block" id="twitter" >
         <a class="twitter-timeline" 
-            href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw"
+            href="https://twitter.com/NatlParkService"
             data-theme="dark"
             data-width="100%"
-            data-height="100%">
+            data-height="98%">
         </a> 
     </div>
     

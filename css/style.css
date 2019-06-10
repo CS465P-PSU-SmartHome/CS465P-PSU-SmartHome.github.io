@@ -1,5 +1,5 @@
 #map {
-    position:relative;
+    
     overflow:hidden;
     margin: 0;
     padding-top:10px;
@@ -9,7 +9,7 @@
     
   }
 #map iframe{
-    position: inline-block;
+    
     top:0;
     left:0;
     width:400px;
@@ -30,14 +30,15 @@ iframe
 #twitter{
     padding-left: 10px;
     padding-top: 10px;
+    float:left;
 }
 
 #weather{
     padding-top: 10px;
     padding-left: 10px;
     margin: 0;
-    position: inline-block;
-    float:left;
+    margin-top: 0;
+    position: inline;
 }
 
 #weather-widget {
@@ -46,7 +47,7 @@ iframe
     box-shadow: 1px 1px 5px black;
     padding: 40px;
     border-radius: 10px;
-    position: relative;
+ 
 }
 
 #weather-widget h1 {
@@ -57,3 +58,33 @@ iframe
     font-size: 30px;
 }
 
+#roomTemperature{
+    font-size: 30px;
+}
+
+
+#nest{
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+   
+}
+
+#nest-widget {
+    background-color: rgba(21,30,41, 0.9);
+    color:white;
+    box-shadow: 1px 1px 5px black;
+    padding: 50px;
+    border-radius: 10px;
+    
+}
+
+#nest-widget h1 {
+    font-size: 20px;
+}
+
+
+#weather-nest-block{
+    float:left;
+    padding:0;
+}
