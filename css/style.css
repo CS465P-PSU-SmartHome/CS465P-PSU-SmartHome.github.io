@@ -32,3 +32,26 @@ iframe
     padding-top: 10px;
 }
 
+#weather{
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+#weather-widget {
+    background-color: rgba(21,30,41, 0.9);
+    color:white;
+    box-shadow: 1px 1px 5px black;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#weather-widget h1 {
+    font-size: 40px;
+}
+
+#temperature {
+    font-size: 30px;
+}
+

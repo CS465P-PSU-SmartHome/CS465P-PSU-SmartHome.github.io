@@ -12,6 +12,29 @@ function getPortlandWeather(){
 
 function init(weatherResult){
     console.log(weatherResult);
+
+
+
+
+    let weatherdescription = document.getElementById('weatherDescriptionHeader')
+    let temperature = document.getElementById('temperature')
+    let humidity = document.getElementById('humidity')
+    let cityname = document.getElementById('cityHeader')
+    let weathericon = document.getElementById('weatherIcon')
+
+
+
+    //weather description
+    weatherdescription.innerText = weatherResult.weather[0].description;
+    //city
+    cityname.innerHTML = weatherResult.name
+    //weather icon
+    weathericon.src = 'http://openweathermap.org/img/w/' + weatherResult.weather[0].icon + '.png';
+    //temp
+    temperature.innerHTML = Math.floor(weatherResult.main.temp) + "&#176 F"
+    //humidity
+    humidity.innerHTML = 'Humidity: ' + weatherResult.main.humidity + "%"
+
 }
 
 getPortlandWeather()
