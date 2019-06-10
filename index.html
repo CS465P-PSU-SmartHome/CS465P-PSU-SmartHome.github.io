@@ -3,7 +3,7 @@
      <!--Twitter Embbed API-->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!--Spotify Embbed API-->
-    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
     <!--Google Maps-->
     
 
@@ -39,6 +39,20 @@
         <div>
     </nav>
 
+    <!--weather-->
+    <div class="h-50 d-inline-block" id="weather" style="position:inline">
+        <div id="weather-widget">
+            <div>
+                <h1 id="cityHeader"></h1>
+                <div id="weahterMain">
+                    <div id="temperature"></div>
+                    <div id="weatherDescriptionHeader"></div>
+                </div>
+                <div class="bottomDetails"></div>
+                <div class="bottomDetails"></div>
+            </div>
+        </div>
+    </div>
     
     <div class="h-50 d-inline-block" id="twitter" style="position:inline">
         <a class="twitter-timeline" 
@@ -48,12 +62,15 @@
             data-height="100%">
         </a> 
     </div>
-  
     
+
+ 
     <div class="h-50 d-inline-block" id="map" style="position:inline float:right;">
     <div style="float:right;">
         <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJv0622aeglVQR9V-uTvtZZKM&destination=place_id:ChIJkbAL-LGglVQRlTfmyWPTDjY&key=AIzaSyB14uDFCVf-_VSWe7KjEsNWbEwWxUf7zkA" allowfullscreen></iframe>
     </div>
     </div>
     
+
+    <script src="script.js"></script>
 </body>
