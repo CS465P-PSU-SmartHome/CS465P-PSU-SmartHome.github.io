@@ -35,12 +35,13 @@ function init(weatherResult){
     //humidity
     humidity.innerHTML = 'Humidity: ' + weatherResult.main.humidity + "%"
 
+    console.log(document.getElementById('twitter-timeline').href)
+
 }
-
-document.getElementById('refresh-twitter-button').addEventListener('click', () => {
-    let twitterTL = document.getElementById('twitter-timeline')
-    twitterTL.href = "https://twitter.com/" + document.getElementById('change-twitter').value;
-})
-
-
 getPortlandWeather()
+
+
+
+
+
+
