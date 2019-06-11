@@ -17,6 +17,7 @@
    
 </head>
 <body>
+    
     <!--navbar-->
     <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Home Dashboard</a>
@@ -29,7 +30,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Qiacheng Li</a>
-                        <a class="dropdown-item" href="#">Contact</a>
+                        <a class="dropdown-item" href="https://github.com/CS465P-PSU-SmartHome/CS465P-PSU-SmartHome.github.io">Contact</a>
                     </div>
                 </li>
             </ul>
@@ -44,7 +45,7 @@
                     <h1 id="cityHeader"></h1>
                     <div id="weahterMain">
                         <div id="temperature"></div>
-                        <div><img id="weatherIcon"></div>
+                        <div><img href='www.google.com' id="weatherIcon"></div>
                         <div id="weatherDescriptionHeader"></div>
                         
                     </div>
@@ -64,31 +65,105 @@
                 </div>
             </div>
         </div>
+        <div id="card1">
+            <div class="card text-white bg-info mb-3"  style="max-width: 18rem;">
+                <div class="card-header">Spotify</div>
+                <div class="card-body">
+                    <h5 class="card-title">Spotify</h5>
+                    <p class="card-text">Spotify Player</p>
+                </div>
+            </div>
+        </div>
+
     </div>
     
+
+    
     <div class="h-100 d-inline-block" style="float:left">
+    
         <div id="twitter" style="float:bottom" >
             <a id="twitter-timeline" class="twitter-timeline" 
                 href="https://twitter.com/Natgeo"
                 data-theme="dark"
                 data-width="100%"
-                data-height="465px";
+                data-height="470px";
                  >
             </a> 
         </div>
+
+        <div>
+            <input id="twitterinput" style="padding-left:10px">
+            <button id="twitterbutton">get Twit</button>
+        </div>
+
+        <div id="card2">
+            <div class="card text-white bg-warning mb-3"  style="max-width: 20rem;">
+                <div class="card-header">Spotify</div>
+                <div class="card-body">
+                    <h5 class="card-title">Spotify</h5>
+                    <p class="card-text">Spotify Player</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
+    
     
     
     <!--google maps-->
-    <div class="h-100 d-inline-block" style="float:left">
+    <div class="h-100 d-inline-block" id= "map" style="float:left">
         
-        <div class="h-50 d-inline-block" id="map" style="float:left;">
-            <div style="float:right;">
-                <iframe width="400" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJv0622aeglVQR9V-uTvtZZKM&destination=place_id:ChIJkbAL-LGglVQRlTfmyWPTDjY&key=AIzaSyB14uDFCVf-_VSWe7KjEsNWbEwWxUf7zkA" allowfullscreen></iframe>
+        <div style="float:right;">
+            <iframe id="gmapiframe" width="550" height="470" frameborder="0" style="border:0" 
+            src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJv0622aeglVQR9V-uTvtZZKM&destination=place_id:ChIJkbAL-LGglVQRlTfmyWPTDjY&key=AIzaSyDnZVO88mEMd8F6xv2KdJ818mAsiHouHk0"
+            allowfullscreen></iframe>
+        </div>
+    
+        <div>
+            <input id="fromGmap" placeholder='from: '>
+            <input id="toGmap" placeholder='to: '>
+            <button id='refreshbtn'>refresh</button>
+        </div>
+
+        <div id="card3">
+            <div class="card text-white bg-success mb-3"  style="max-width: 40rem;">
+                <div class="card-header">Spotify</div>
+                <div class="card-body">
+                    <h5 class="card-title">Spotify</h5>
+                    <p class="card-text">Spotify Player</p>
+                </div>
             </div>
         </div>
     </div>
+
+     <div class="h-100 d-inline-block" style="float:right">
+
+            <div style="float:right;">
+                <iframe width="500" height="680" frameborder="0" style="border:0" src="https://outlook.live.com/owa//calendar/00000000-0000-0000-0000-000000000000/9a78f2c6-021d-495f-b76d-57d1b7a984ec/cid-F8987D6EF0DA1825/index.html"></iframe>
+            </div>
+        
+    </div>
     
 
+
     <script src="script.js"></script>
+    <script>
+         document.getElementById('refreshbtn').addEventListener('click', ()=>{
+             console.log(document.getElementById('gmapiframe'))
+             let fromGmap = document.getElementById('fromGmap').value
+             let toGmap = document.getElementById('toGmap').value
+             console.log(fromGmap)
+             document.getElementById('gmapiframe').src = `https://www.google.com/maps/embed/v1/directions?origin=${fromGmap}&destination=${toGmap}&key=AIzaSyDnZVO88mEMd8F6xv2KdJ818mAsiHouHk0`
+         })
+    </script>
+
+    <script>
+         document.getElementById('twitterbutton').addEventListener('click', ()=>{
+             let twi = document.getElementById('twitterinput').value
+             console.log(document.getElementById('twitter-timeline').src)
+             document.getElementById('twitter-timeline').src = `"https://twitter.com/${twi}"`
+         })
+    </script>
 </body>
