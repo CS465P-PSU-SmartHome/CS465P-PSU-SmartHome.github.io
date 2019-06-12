@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+     <!--Twitter Embbed API-->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!--Spotify Embbed API-->
+    <!--<script src="https://sdk.scdn.co/spotify-player.js"></script>-->
+    <!--Google Maps-->
+    
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+	
+
+    <!--navbar-->
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Home Dashboard</a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class= "nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Dashboard
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Qiacheng Li</a>
+                        <a class="dropdown-item" href="blog.html">Blog</a>
+                        <a class="dropdown-item" href="https://github.com/CS465P-PSU-SmartHome/CS465P-PSU-SmartHome.github.io">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        <div>
+    </nav>
+    
+   
+</head>
+
+<body>
+    <div style="">
+        <div class="col-md-8 blog-main" style="font-size: 20px">
+            <p>
+            The final project assignment for undergraduate students is to create a front-end web app utilizing web application APIs such as Google Map API,  Open Weather API, Spotify API, etc. My first impression was to create a home dashboard that could be customized to display or control  personalized application in a web page. This inspiration was coming from my recent purchase of the Nest thermostat. I wanted to have my room temperature displayed on the web and control it utilizing Nest API, but sadly Nest API is eol and it’s in the transit to Google Assistant API so I decided not to use Nest API.
+            </p>
+
+            <p>
+            I started the project with some basic html tags and designed the navigation bar using bootstrap. It was pretty straight forward since we have learned bootstrap in class. The first API I tried was the openweather API. I first registered an account at OpenWeatherMap.org and generated an API key. The API usages on the webpage is well documented and I hardcoded Portland location for the API request since I wanted to use this web app at home only. Converting the API response back from the request to a json format variable made writing javascript easier. By assigning IDs to each of the elements such as weather, temperature, wind speed, humidity, we can modify the innerHTML using document.getElementByID. 
+            </p>
+
+            <p>
+            Then, I added an embedded  twitter time-line widget by visiting publish.twitter.com. The code is easily generated and modified. I then added a Google Map on my dashboard web app to display the time it would take me to get to school from home, and showing possible routes to save time. Using Google API is straight forward however I was running into issues where I had to link to a credit card in order to use the API. otherwise it would be ‘development only’ water marks on the map. Later I added two input boxes for users to check out the travel time between different locations, here I encountered issues with accessing the element with getElementById. By debugging it with the console on Google Chrome Browser I noticed that the click event of the button was not able to access the iframe element with getElementByID because it was always returning null object. After googling and reading the comments, I solved it by putting the addEventListener script section at the end of the <body> tag because we needed to initialize the element first before we can access it.
+            </p>
+
+            <p>
+            The most time consuming part of this project was the styling. Utilizing css to modify the location and the style of each widget was not  fun. I wanted to create a nice looking web application but some of the widgets’ padding were off by like 1px, and the block alignments were giving a headache. 
+            </p>
+
+            <p>
+            Exploring the Google Cloud Platform, I noticed that there were a lot of things we can do with just the Google Maps API. The distance matrix API call would return the distance between the origin and destination, as well as the time it takes to get there. The direction API provides detailed turn-by-turn navigation that could help developers to implement navigation map. 
+            </p>
+
+            <p>
+            Finally, I added the outlook calendar using an iframe. With the calendar displayed on the web, I could now see my daily schedules all in one dashboard making life easier. The outlook calendar also syncs up with my outlook account automatically so whenever I make a change to my outlook calendar then it would be updated in the web page as well.
+            </p>
+            <p>
+            The journey of the final project has been fun and I believe the home dashboard web application has its potential to expand. My next step would be to embed Spotify player and news feed onto the webpage, then redesign or use some templates for the dashboard.
+            </p>
+        </div>
+    </div>
+</body>
+
+   
